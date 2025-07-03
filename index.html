@@ -18,13 +18,13 @@
 
   <!-- ========== NAVBAR ========== -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-    <div class="container position-relative">
+    <div class="container-fluid position-relative px-2 px-md-4">
       <a class="navbar-brand fw-bold fs-3" href="#">Fikky Coffee</a>
       <button class="navbar-toggler position-absolute top-0 end-0 mt-2 me-2 d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu" aria-label="Toggle navigation" style="z-index:1051;">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse justify-content-center d-none d-lg-flex" id="navbarNav">
-        <ul class="navbar-nav gap-3 text-center">
+        <ul class="navbar-nav gap-2 gap-md-3 text-center">
           <li class="nav-item"><a class="nav-link py-2" href="#home">Beranda</a></li>
           <li class="nav-item"><a class="nav-link py-2" href="#about">About</a></li>
           <li class="nav-item"><a class="nav-link py-2" href="#galeri">Galeri</a></li>
@@ -53,17 +53,17 @@
   </div>
 
   <!-- ========== JUMBOTRON ========== -->
-  <section id="home" class="jumbotron text-center bg-light py-6 mb-0"
+  <section id="home" class="jumbotron text-center bg-light py-5 py-md-6 mb-0"
     style="background: linear-gradient(120deg, rgba(120,90,60,0.45) 0%, rgba(255,240,220,0.7) 100%), url('gambar5.jpg');
-          background-size: cover; background-position: center; position: relative; min-height: 80vh;">
+          background-size: cover; background-position: center; position: relative; min-height: 60vh; min-height: 80vh;">
     <div class="jumbotron-overlay"
       style="position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(255,245,230,0.55);backdrop-filter:blur(2px);z-index:1;">
     </div>
     <div class="container position-relative" style="z-index:2;max-width:800px;">
-      <div class="card border-0 shadow-sm mb-5 bg-white animate-fadein"
+      <div class="card border-0 shadow-sm mb-4 mb-md-5 bg-white animate-fadein"
         style="background:rgba(255,255,255,0.93);border-radius:1.5rem;">
-        <div class="card-body text-center text-dark p-5">
-          <img src="logo.jpg" class="rounded-circle img-thumbnail mb-3 animate-slidein" alt="Foto Cafe Fikky" style="width:140px;height:140px;object-fit:cover;">
+        <div class="card-body text-center text-dark p-3 p-md-5">
+          <img src="logo.jpg" class="rounded-circle img-thumbnail mb-3 animate-slidein img-fluid" alt="Foto Cafe Fikky" style="width:120px;height:120px;object-fit:cover;max-width:100%;">
           <h1 class="display-4 fw-bold animate-fadein" style="animation-delay:0.2s;">Selamat Datang di Fikky Coffee</h1>
           <p class="lead animate-fadein" style="animation-delay:0.4s;">Tempat terbaik untuk nongkrong dan ngobrol santai</p>
           <p class="mb-4 animate-fadein" style="animation-delay:0.6s;">Fikky Coffee berdiri sejak 2019, menghadirkan beberapa menu berkualitas dan suasana nyaman untuk semua kalangan. Nikmati berbagai varian menu yang kami sediakan dan makanan ringan favorit di tempat kami!</p>
@@ -83,7 +83,7 @@
   <hr class="my-0" style="border-color:#e0c9a6;opacity:0.5;">
 
   <!-- ========== ABOUT ========== -->
-  <section id="about" class="py-6 bg-white">
+  <section id="about" class="py-5 py-md-6 bg-white">
     <div class="container" style="max-width:800px;">
       <h2 class="text-center mb-5 fw-bold">Tentang Fikky Coffee</h2>
       <div class="card border-0 shadow-sm mb-5">
@@ -107,13 +107,13 @@
   <hr class="my-0" style="border-color:#e0c9a6;opacity:0.5;">
 
   <!-- ========== GALERI KAMI ========== -->
-  <section id="galeri" class="py-6 bg-white">
-    <div class="container">
-      <h2 class="text-center mb-5">Galeri Kami</h2>
-      <div class="row g-3 justify-content-center">
+  <section id="galeri" class="py-5 py-md-6 bg-white">
+    <div class="container-fluid px-2 px-md-4">
+      <h2 class="text-center mb-4 mb-md-5">Galeri Kami</h2>
+      <div class="row g-2 g-md-3 justify-content-center">
         <div class="col-6 col-md-4 col-lg-3">
           <div class="gallery-item">
-            <img src="foto owner.jpg" alt="Foto Owner Fikky Coffee" class="img-fluid rounded shadow gallery-img" data-bs-toggle="modal" data-bs-target="#galeriModalOwner">
+            <img src="foto owner.jpg" alt="Foto Owner Fikky Coffee" class="img-fluid rounded shadow gallery-img" data-bs-toggle="modal" data-bs-target="#galeriModalOwner" style="max-width:100%;height:auto;">
             <div class="gallery-caption text-center mt-2">Foto Owner Fikky Coffee</div>
           </div>
         </div>
@@ -153,7 +153,13 @@
             <div class="gallery-caption text-center mt-2">Menu Fikky Coffee</div>
           </div>
         </div>
+      <div class="col-6 col-md-4 col-lg-3">
+        <div class="gallery-item">
+          <img src="gambar6.jpg" alt="Bagian Dalam Hadap Depan" class="img-fluid rounded shadow gallery-img" data-bs-toggle="modal" data-bs-target="#galeriModal7">
+          <div class="gallery-caption text-center mt-2">Bagian Dalam Hadap Depan</div>
+        </div>
       </div>
+    </div>
 
     <!-- Modal Preview Gambar Galeri -->
     <div class="modal fade" id="galeriModal1" tabindex="-1" aria-labelledby="galeriModalLabel1" aria-hidden="true">
@@ -219,15 +225,24 @@
         </div>
       </div>
     </div>
+    <div class="modal fade" id="galeriModal7" tabindex="-1" aria-labelledby="galeriModalLabel7" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-body p-0">
+            <img src="gambar6.jpg" alt="Bagian Dalam Hadap Depan" class="img-fluid w-100 rounded">
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 
   <hr class="my-0" style="border-color:#e0c9a6;opacity:0.5;">
 
   <!-- ========== DAFTAR MENU ========== -->
-  <section id="menu" class="py-6 bg-light">
-    <div class="container">
-      <h2 class="text-center mb-5 fw-bold">Daftar Menu</h2>
-      <div class="d-flex justify-content-center gap-3 mb-4">
+  <section id="menu" class="py-5 py-md-6 bg-light">
+    <div class="container-fluid px-2 px-md-4">
+      <h2 class="text-center mb-4 mb-md-5 fw-bold">Daftar Menu</h2>
+      <div class="d-flex flex-wrap flex-md-nowrap justify-content-center gap-2 gap-md-3 mb-3 mb-md-4">
         <button class="btn btn-outline-primary kategori-menu-btn" data-target="#kategori-makanan">Makanan</button>
         <button class="btn btn-outline-success kategori-menu-btn" data-target="#kategori-minuman">Minuman</button>
         <button class="btn btn-outline-warning kategori-menu-btn" data-target="#kategori-cemilan">Cemilan</button>
@@ -235,11 +250,11 @@
       <!-- Kategori Makanan -->
       <h4 class="fw-bold mb-3 mt-5" id="kategori-makanan">Makanan</h4>
       <hr class="my-4">
-      <div class="row g-4">
+      <div class="row g-2 g-md-4">
         <!-- Card: Ayam Bakar -->
         <div class="col-md-4 mb-4 d-flex align-items-stretch">
           <div class="card h-100 d-flex flex-column menu-card shadow-sm mb-3">
-            <img src="ayambakar.jpg" class="card-img-top menu-img" alt="Ayam Bakar">
+            <img src="ayambakar.jpg" class="card-img-top menu-img img-fluid" alt="Ayam Bakar" style="object-fit:cover;max-height:180px;">
             <div class="card-body d-flex flex-column p-3">
               <h5 class="card-title">Nasi Ayam Bakar</h5>
               <span class="badge bg-success mb-3">Rp 12.000</span>
@@ -492,7 +507,7 @@
   <hr class="my-0" style="border-color:#e0c9a6;opacity:0.5;">
 
   <!-- ========== TESTIMONI PELANGGAN ========== -->
-  <section id="testimoni" class="py-5 bg-white">
+  <section id="testimoni" class="py-4 py-md-5 bg-white">
     <div class="container">
       <h2 class="text-center mb-4">Testimoni Pelanggan</h2>
       <div class="row justify-content-center">
@@ -527,7 +542,7 @@
   <hr class="my-0" style="border-color:#e0c9a6;opacity:0.5;">
 
   <!-- ========== FORM KONTAK & LOKASI ========== -->
-  <section id="kontak" class="py-6">
+  <section id="kontak" class="py-5 py-md-6">
     <div class="container" style="max-width:900px;">
       <h2 class="text-center mb-4 fw-bold">Hubungi Kami</h2>
       <div class="row justify-content-center">
@@ -597,7 +612,7 @@
 
   <!-- ========== FOOTER ========== -->
   <footer class="bg-dark text-white text-center p-3 d-flex flex-column flex-md-row justify-content-between align-items-center">
-    <div class="mb-2 mb-md-0 w-100 text-center">
+    <div class="mb-2 mb-md-0 w-100 text-center small">
       &copy; 2025 Fikky Coffee. All rights reserved.
     </div>
     <div class="d-flex align-items-center gap-3">
@@ -605,7 +620,7 @@
         <a href="https://instagram.com" target="_blank" title="Instagram">
           <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/instagram.svg" alt="Instagram" class="sosmed-icon">
         </a>
-        <a href="https://wa.me/6281234567890" target="_blank" title="WhatsApp">
+        <a href="https://wa.me/6281260713931" target="_blank" title="WhatsApp">
           <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/whatsapp.svg" alt="WhatsApp" class="sosmed-icon">
         </a>
       </div>
