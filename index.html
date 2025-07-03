@@ -3,237 +3,499 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fikky Coffee - Tempat Nongkrong Terbaik</title>
-  <meta name="description" content="Fikky Coffee, tempat terbaik untuk nongkrong dan ngobrol santai. Nikmati berbagai varian menu berkualitas dan suasana nyaman untuk semua kalangan.">
+  <title>Fikky Coffee</title>
 
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  <!-- Bootstrap CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
+  <!-- CSS Custom -->
   <link rel="stylesheet" href="style.css">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap" rel="stylesheet">
+  <!-- Tambahkan Google Fonts di <head> -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-    <div class="container">
+  <!-- ========== NAVBAR ========== -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container position-relative">
       <a class="navbar-brand fw-bold fs-3" href="#">Fikky Coffee</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu" aria-label="Toggle navigation">
+      <button class="navbar-toggler position-absolute top-0 end-0 mt-2 me-2 d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu" aria-label="Toggle navigation" style="z-index:1051;">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+      <div class="collapse navbar-collapse justify-content-center d-none d-lg-flex" id="navbarNav">
         <ul class="navbar-nav gap-3 text-center">
-          <li class="nav-item"><a class="nav-link active" href="#home">Beranda</a></li>
-          <li class="nav-item"><a class="nav-link" href="#about">Tentang</a></li>
-          <li class="nav-item"><a class="nav-link" href="#menu">Menu</a></li>
-          <li class="nav-item"><a class="nav-link" href="#galeri">Galeri</a></li>
-          <li class="nav-item"><a class="nav-link" href="#kontak">Kontak</a></li>
+          <li class="nav-item"><a class="nav-link py-2" href="#home">Beranda</a></li>
+          <li class="nav-item"><a class="nav-link py-2" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link py-2" href="#galeri">Galeri</a></li>
+          <li class="nav-item"><a class="nav-link py-2" href="#menu">Menu</a></li>
+          <li class="nav-item"><a class="nav-link py-2" href="#kontak">Kontak</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <div class="offcanvas offcanvas-end text-white" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel">
-    <div class="offcanvas-header border-bottom border-secondary">
+  <!-- Offcanvas Menu untuk Mobile -->
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel" style="max-width:220px;background:rgba(255,255,255,0.4);backdrop-filter:blur(6px);">
+    <div class="offcanvas-header">
       <h5 class="offcanvas-title fw-bold" id="offcanvasMenuLabel">Menu</h5>
-      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
     <div class="offcanvas-body">
       <ul class="navbar-nav flex-column gap-3 text-center">
         <li class="nav-item"><a class="nav-link py-2" href="#home" data-bs-dismiss="offcanvas">Beranda</a></li>
-        <li class="nav-item"><a class="nav-link py-2" href="#about" data-bs-dismiss="offcanvas">Tentang</a></li>
-        <li class="nav-item"><a class="nav-link py-2" href="#menu" data-bs-dismiss="offcanvas">Menu</a></li>
+        <li class="nav-item"><a class="nav-link py-2" href="#about" data-bs-dismiss="offcanvas">About</a></li>
         <li class="nav-item"><a class="nav-link py-2" href="#galeri" data-bs-dismiss="offcanvas">Galeri</a></li>
+        <li class="nav-item"><a class="nav-link py-2" href="#menu" data-bs-dismiss="offcanvas">Menu</a></li>
         <li class="nav-item"><a class="nav-link py-2" href="#kontak" data-bs-dismiss="offcanvas">Kontak</a></li>
       </ul>
     </div>
   </div>
 
-  <section id="home" class="jumbotron text-center" style="background-image: url('gambar5.jpg');">
-    <div class="jumbotron-overlay"></div>
-    <div class="container">
-      <div class="card border-0 p-lg-4">
-        <div class="card-body text-center text-dark">
-          <img src="logo.jpg" class="rounded-circle img-thumbnail mb-4 jumbotron-logo" alt="Logo Fikky Coffee">
-          <h1 class="display-4 fw-bolder">Selamat Datang di Fikky Coffee</h1>
-          <p class="lead my-3">Tempat terbaik untuk nongkrong dan ngobrol santai.</p>
-          <p class="mb-4">Berdiri sejak 2019, kami menghadirkan menu berkualitas dan suasana nyaman untuk semua. Nikmati berbagai varian menu andalan kami!</p>
-          <a href="#menu" class="btn btn-primary btn-lg">Lihat Menu</a>
+  <!-- ========== JUMBOTRON ========== -->
+  <section id="home" class="jumbotron text-center bg-light py-6 mb-0" style="padding-top: 90px; background: linear-gradient(120deg, rgba(120,90,60,0.45) 0%, rgba(255,240,220,0.7) 100%), url('gambar5.jpg');
+          background-size: cover; background-position: center; position: relative; min-height: 80vh;">
+    <div class="jumbotron-overlay"
+      style="position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(255,245,230,0.55);backdrop-filter:blur(2px);z-index:1;">
+    </div>
+    <div class="container position-relative" style="z-index:2;max-width:800px;">
+      <div class="card border-0 shadow-sm mb-5 bg-white animate-fadein"
+        style="background:rgba(255,255,255,0.93);border-radius:1.5rem;">
+        <div class="card-body text-center text-dark p-5">
+          <img src="logo.jpg" class="rounded-circle img-thumbnail mb-3 animate-slidein" alt="Foto Cafe Fikky" style="width:140px;height:140px;object-fit:cover;">
+          <h1 class="display-4 fw-bold animate-fadein" style="animation-delay:0.2s;">Selamat Datang di Fikky Coffee</h1>
+          <p class="lead animate-fadein" style="animation-delay:0.4s;">Tempat terbaik untuk nongkrong dan ngobrol santai</p>
+          <p class="mb-4 animate-fadein" style="animation-delay:0.6s;">Fikky Coffee berdiri sejak 2019, menghadirkan beberapa menu berkualitas dan suasana nyaman untuk semua kalangan. Nikmati berbagai varian menu yang kami sediakan dan makanan ringan favorit di tempat kami!</p>
+          <div class="mb-3 d-flex flex-wrap justify-content-center gap-2 animate-fadein" style="animation-delay:0.8s;">
+            <span class="badge bg-success fs-6"><i class="bi bi-cup-hot me-1"></i> Promo Khusus Hari Jum'at : Gratis Teh Manis Dingin</span>
+            <span class="badge bg-warning fs-6"><i class="bi bi-wifi me-1"></i> Free WiFi</span>
+            <span class="badge bg-primary fs-6"><i class="bi bi-clock me-1"></i> Buka 09.00-22.00</span>
+          </div>
+          <a href="#menu" class="btn btn-primary btn-lg mx-2 animate-fadein" style="animation-delay:1s;">Lihat Menu</a>
+          <a href="#about" class="btn btn-outline-secondary btn-lg mx-2 animate-fadein" style="animation-delay:1.1s;">Tentang Kami</a>
+          <a href="#menu" class="btn btn-danger btn-lg mx-2 animate-fadein" style="animation-delay:1.2s;"><i class="bi bi-star me-1"></i> Promo Spesial!</a>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="about" class="py-5">
-    <div class="container" style="max-width:850px;">
+  <hr class="my-0" style="border-color:#e0c9a6;opacity:0.5;">
+
+  <!-- ========== ABOUT ========== -->
+  <section id="about" class="py-6 bg-white">
+    <div class="container" style="max-width:800px;">
       <h2 class="text-center mb-5 fw-bold">Tentang Fikky Coffee</h2>
-      <div class="row g-4 align-items-center">
-        <div class="col-md-6">
-          <img src="foto owner.jpg" class="img-fluid rounded-3 shadow-sm" alt="Owner Fikky Coffee">
-        </div>
-        <div class="col-md-6">
-          <p>Fikky Coffee merupakan usaha kuliner yang berdiri sejak tahun 2019, dikenal sebagai tempat nongkrong favorit mahasiswa. Dimiliki oleh Muhammad Taufiq, seorang pegiat usaha muda yang visioner.</p>
-          <p>Dengan omzet rata-rata Rp 30.000.000 per bulan, menu unggulan kami seperti <strong>Ayam Lava</strong>, <strong>Matcha Latte</strong>, dan <strong>Dimsum</strong> menjadi daya tarik utama bagi pelanggan.</p>
-          <ul class="list-unstyled">
-            <li><i class="bi bi-check-circle-fill text-success me-2"></i>Tempat nyaman, WiFi & colokan gratis.</li>
-            <li><i class="bi bi-check-circle-fill text-success me-2"></i>Menu makanan & minuman variatif.</li>
-            <li><i class="bi bi-check-circle-fill text-success me-2"></i>Pelayanan cepat dan ramah.</li>
+      <div class="card border-0 shadow-sm mb-5">
+        <div class="card-body p-4">
+          <p> Fikky Coffee merupakan usaha kuliner yang berdiri sejak tahun 2019 dan kini dikenal sebagai salah satu tempat nongkrong favorit mahasiswa. Toko ini dimiliki oleh Muhammad Taufiq, seorang pegiat usaha muda yang memulai bisnisnya dengan tekad dan perencanaan yang matang.</p>
+          <p> Awalnya, Fikky Coffee dibuka dengan modal awal sebesar Rp 50.000.000. Modal tersebut digunakan untuk menyewa tempat, membeli peralatan, bahan baku, serta mendesain suasana yang nyaman dan instagramable. Dalam operasional harian, kedai ini menghabiskan sekitar Rp 1.000.000 per hari untuk belanja bahan dan keperluan produksi.</p>
+          <p> Dengan pelayanan yang ramah, menu yang variatif, serta lokasi strategis di area kampus, Fikky Coffee kini mampu menghasilkan rata-rata omzet sekitar Rp 30.000.000 per bulan. Menu unggulannya seperti Ayam Lava, Matcha Latte, dan Dimsum menjadi daya tarik utama bagi pelanggan tetap maupun pelanggan baru.</p>
+          <h4 class="fw-bold mb-3 mt-4">Keunggulan Kami</h4>
+          <ul class="mb-0">
+            <li>Ayam lava jadi pilihan utama dan berkualitas</li>
+            <li>Menu makanan & minuman variatif</li>
+            <li>Tempat nyaman, cocok untuk nugas atau santai</li>
+            <li>WiFi & colokan gratis</li>
+            <li>Pelayanan cepat dan ramah</li>
           </ul>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="menu" class="py-5 bg-light">
-    <div class="container">
-      <h2 class="text-center mb-5 fw-bold">Daftar Menu Favorit</h2>
-      
-      <h3 class="mb-4" id="kategori-makanan">Makanan</h3>
-      <div class="row g-4">
-        <div class="col-lg-4 col-md-6 col-12">
-          <div class="card menu-card">
-            <img src="ayamlava.jpg" class="menu-img" alt="Nasi Ayam Lava">
-            <div class="card-body">
-              <h5 class="card-title">Nasi Ayam Lava</h5>
-              <p class="card-text text-muted">Ayam crispy disiram saus pedas meleleh. Pedasnya mantap, gurihnya nempel di lidah.</p>
-              <h4 class="text-danger fw-bold">Rp 12.000</h4>
-              <button class="btn btn-outline-primary mt-3 btnPesan" data-menu="Nasi Ayam Lava">Pesan</button>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 col-12">
-          <div class="card menu-card">
-            <img src="ayamgeprekjpg.jpg" class="menu-img" alt="Nasi Ayam Geprek">
-            <div class="card-body">
-              <h5 class="card-title">Nasi Ayam Geprek</h5>
-              <p class="card-text text-muted">Ayam goreng renyah digeprek dengan sambal bawang pedas. Disajikan dengan nasi hangat.</p>
-              <h4 class="text-danger fw-bold">Rp 15.000</h4>
-              <button class="btn btn-outline-primary mt-3 btnPesan" data-menu="Nasi Ayam Geprek">Pesan</button>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 col-12">
-          <div class="card menu-card">
-            <img src="lelecabeijo.jpg" class="menu-img" alt="Paket Lele Cabai Hijau">
-            <div class="card-body">
-              <h5 class="card-title">Paket Lele Cabai Hijau</h5>
-              <p class="card-text text-muted">Lele goreng dengan sambal ijo segar, nasi, lalapan, dan sudah termasuk teh manis dingin.</p>
-              <h4 class="text-danger fw-bold">Rp 12.000</h4>
-              <button class="btn btn-outline-primary mt-3 btnPesan" data-menu="Paket Lele Cabai Hijau">Pesan</button>
-            </div>
-          </div>
-        </div>
-      </div>
+  <hr class="my-0" style="border-color:#e0c9a6;opacity:0.5;">
 
-      <div class="row mt-5">
-        <div class="col-md-6">
-          <h3 class="mb-4" id="kategori-minuman">Minuman</h3>
-          <div class="row g-4">
-            <div class="col-lg-6 col-md-12 col-12">
-                <div class="card menu-card">
-                    <img src="matcha.jpg" class="menu-img" alt="Matcha">
-                    <div class="card-body">
-                        <h5 class="card-title">Matcha Latte</h5>
-                        <p class="card-text text-muted">Rasa segar & creamy dari teh hijau dan susu.</p>
-                        <h4 class="text-danger fw-bold">Rp 7.000</h4>
-                        <button class="btn btn-outline-primary mt-3 btnPesan" data-menu="Matcha Latte">Pesan</button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6 col-md-12 col-12">
-                <div class="card menu-card">
-                    <img src="cappucino.jpg" class="menu-img" alt="Cappuccino">
-                    <div class="card-body">
-                        <h5 class="card-title">Cappuccino</h5>
-                        <p class="card-text text-muted">Kopi creamy dan manis ringan.</p>
-                        <h4 class="text-danger fw-bold">Rp 7.000</h4>
-                        <button class="btn btn-outline-primary mt-3 btnPesan" data-menu="Cappuccino">Pesan</button>
-                    </div>
-                </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <h3 class="mb-4" id="kategori-cemilan">Cemilan</h3>
-           <div class="row g-4">
-            <div class="col-lg-6 col-md-12 col-12">
-                <div class="card menu-card">
-                    <img src="dimsum.jpg" class="menu-img" alt="Dimsum">
-                    <div class="card-body">
-                        <h5 class="card-title">Dimsum (4 pcs)</h5>
-                        <p class="card-text text-muted">Lembut, gurih, dan nikmat dengan saus spesial.</p>
-                        <h4 class="text-danger fw-bold">Rp 17.000</h4>
-                        <button class="btn btn-outline-primary mt-3 btnPesan" data-menu="Dimsum">Pesan</button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6 col-md-12 col-12">
-                <div class="card menu-card">
-                    <img src="baksobakar.jpg" class="menu-img" alt="Bakso Bakar">
-                    <div class="card-body">
-                        <h5 class="card-title">Bakso Bakar</h5>
-                        <p class="card-text text-muted">Enak dan gurih dengan bumbu spesial.</p>
-                        <h4 class="text-danger fw-bold">Rp 5.000</h4>
-                        <button class="btn btn-outline-primary mt-3 btnPesan" data-menu="Bakso Bakar">Pesan</button>
-                    </div>
-                </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <section id="galeri" class="py-5">
+  <!-- ========== GALERI KAMI ========== -->
+  <section id="galeri" class="py-6 bg-white">
     <div class="container">
       <h2 class="text-center mb-5">Galeri Kami</h2>
-      <div class="row g-3">
-        <div class="col-lg-3 col-md-4 col-6"><div class="gallery-item"><img src="gambar1.jpg" alt="Suasana Cafe 1" class="gallery-img" data-bs-toggle="modal" data-bs-target="#galeriModal" data-bs-img-src="gambar1.jpg"></div></div>
-        <div class="col-lg-3 col-md-4 col-6"><div class="gallery-item"><img src="gambar2.jpg" alt="Suasana Cafe 2" class="gallery-img" data-bs-toggle="modal" data-bs-target="#galeriModal" data-bs-img-src="gambar2.jpg"></div></div>
-        <div class="col-lg-3 col-md-4 col-6"><div class="gallery-item"><img src="gambar3.jpg" alt="Suasana Cafe 3" class="gallery-img" data-bs-toggle="modal" data-bs-target="#galeriModal" data-bs-img-src="gambar3.jpg"></div></div>
-        <div class="col-lg-3 col-md-4 col-6"><div class="gallery-item"><img src="gambar4.jpg" alt="Suasana Cafe 4" class="gallery-img" data-bs-toggle="modal" data-bs-target="#galeriModal" data-bs-img-src="gambar4.jpg"></div></div>
-        <div class="col-lg-3 col-md-4 col-6"><div class="gallery-item"><img src="gambar5.jpg" alt="Suasana Cafe 5" class="gallery-img" data-bs-toggle="modal" data-bs-target="#galeriModal" data-bs-img-src="gambar5.jpg"></div></div>
-        <div class="col-lg-3 col-md-4 col-6"><div class="gallery-item"><img src="gambar6.jpg" alt="Suasana Cafe 6" class="gallery-img" data-bs-toggle="modal" data-bs-target="#galeriModal" data-bs-img-src="gambar6.jpg"></div></div>
-        <div class="col-lg-3 col-md-4 col-6"><div class="gallery-item"><img src="menu.jpg" alt="Menu Fikky Coffee" class="gallery-img" data-bs-toggle="modal" data-bs-target="#galeriModal" data-bs-img-src="menu.jpg"></div></div>
-        <div class="col-lg-3 col-md-4 col-6"><div class="gallery-item"><img src="foto owner.jpg" alt="Foto Owner" class="gallery-img" data-bs-toggle="modal" data-bs-target="#galeriModal" data-bs-img-src="foto owner.jpg"></div></div>
+      <div class="row g-3 justify-content-center">
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="gallery-item">
+            <img src="foto owner.jpg" alt="Foto Owner Fikky Coffee" class="img-fluid rounded shadow gallery-img" data-bs-toggle="modal" data-bs-target="#galeriModalOwner">
+            <div class="gallery-caption text-center mt-2">Foto Owner Fikky Coffee</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="gallery-item">
+            <img src="gambar1.jpg" alt="Suasana Cafe 1" class="img-fluid rounded shadow gallery-img" data-bs-toggle="modal" data-bs-target="#galeriModal1">
+            <div class="gallery-caption text-center mt-2">Foto Bagian Depan</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="gallery-item">
+            <img src="gambar2.jpg" alt="Suasana Cafe 2" class="img-fluid rounded shadow gallery-img" data-bs-toggle="modal" data-bs-target="#galeriModal2">
+            <div class="gallery-caption text-center mt-2">Foto Bagian Samping Kanan</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="gallery-item">
+            <img src="gambar3.jpg" alt="Barista" class="img-fluid rounded shadow gallery-img" data-bs-toggle="modal" data-bs-target="#galeriModal3">
+            <div class="gallery-caption text-center mt-2">Foto Bagian Dalam</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="gallery-item">
+            <img src="gambar4.jpg" alt="Kopi Latte Art" class="img-fluid rounded shadow gallery-img" data-bs-toggle="modal" data-bs-target="#galeriModal4">
+            <div class="gallery-caption text-center mt-2">Foto Bagian Samping Kiri</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="gallery-item">
+            <img src="gambar5.jpg" alt="Suasana Cafe 5" class="img-fluid rounded shadow gallery-img" data-bs-toggle="modal" data-bs-target="#galeriModal5">
+            <div class="gallery-caption text-center mt-2">Foto Bagian Dalam</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="gallery-item">
+            <img src="menu.jpg" alt="Menu Fikky Coffee" class="img-fluid rounded shadow gallery-img" data-bs-toggle="modal" data-bs-target="#galeriModal6">
+            <div class="gallery-caption text-center mt-2">Menu Fikky Coffee</div>
+          </div>
+        </div>
+      <div class="col-6 col-md-4 col-lg-3">
+        <div class="gallery-item">
+          <img src="gambar6.jpg" alt="Bagian Dalam Hadap Depan" class="img-fluid rounded shadow gallery-img" data-bs-toggle="modal" data-bs-target="#galeriModal7">
+          <div class="gallery-caption text-center mt-2">Bagian Dalam Hadap Depan</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Preview Gambar Galeri -->
+    <div class="modal fade" id="galeriModal1" tabindex="-1" aria-labelledby="galeriModalLabel1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-body p-0">
+            <img src="gambar1.jpg" alt="Suasana Cafe 1" class="img-fluid w-100 rounded">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="galeriModal2" tabindex="-1" aria-labelledby="galeriModalLabel2" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-body p-0">
+            <img src="gambar2.jpg" alt="Suasana Cafe 2" class="img-fluid w-100 rounded">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="galeriModal3" tabindex="-1" aria-labelledby="galeriModalLabel3" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-body p-0">
+            <img src="gambar3.jpg" alt="Barista" class="img-fluid w-100 rounded">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="galeriModal4" tabindex="-1" aria-labelledby="galeriModalLabel4" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-body p-0">
+            <img src="gambar4.jpg" alt="Kopi Latte Art" class="img-fluid w-100 rounded">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="galeriModal5" tabindex="-1" aria-labelledby="galeriModalLabel5" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-body p-0">
+            <img src="gambar5.jpg" alt="Suasana Cafe 5" class="img-fluid w-100 rounded">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="galeriModal6" tabindex="-1" aria-labelledby="galeriModalLabel6" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-body p-0">
+            <img src="menu.jpg" alt="Menu Fikky Coffee" class="img-fluid w-100 rounded">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="galeriModalOwner" tabindex="-1" aria-labelledby="galeriModalLabelOwner" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-body p-0">
+            <img src="foto owner.jpg" alt="Foto Owner Fikky Coffee" class="img-fluid w-100 rounded">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="galeriModal7" tabindex="-1" aria-labelledby="galeriModalLabel7" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-body p-0">
+            <img src="gambar6.jpg" alt="Bagian Dalam Hadap Depan" class="img-fluid w-100 rounded">
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <div class="modal fade" id="galeriModal" tabindex="-1" aria-labelledby="galeriModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg">
-      <div class="modal-content bg-transparent border-0">
-        <div class="modal-body p-0">
-          <img id="modalImage" src="" alt="Preview Gambar Galeri" class="img-fluid w-100 rounded-3">
+  <hr class="my-0" style="border-color:#e0c9a6;opacity:0.5;">
+
+  <!-- ========== DAFTAR MENU ========== -->
+  <section id="menu" class="py-6 bg-light">
+    <div class="container">
+      <h2 class="text-center mb-5 fw-bold">Daftar Menu</h2>
+      <div class="d-flex justify-content-center gap-3 mb-4">
+        <button class="btn btn-outline-primary kategori-menu-btn" data-target="#kategori-makanan">Makanan</button>
+        <button class="btn btn-outline-success kategori-menu-btn" data-target="#kategori-minuman">Minuman</button>
+        <button class="btn btn-outline-warning kategori-menu-btn" data-target="#kategori-cemilan">Cemilan</button>
+      </div>
+      <!-- Kategori Makanan -->
+      <h4 class="fw-bold mb-3 mt-5" id="kategori-makanan">Makanan</h4>
+      <hr class="my-4">
+      <div class="row g-4">
+        <!-- Card: Ayam Bakar -->
+        <div class="col-md-4 mb-4 d-flex align-items-stretch">
+          <div class="card h-100 d-flex flex-column menu-card shadow-sm mb-3">
+            <img src="ayambakar.jpg" class="card-img-top menu-img" alt="Ayam Bakar">
+            <div class="card-body d-flex flex-column p-3">
+              <h5 class="card-title">Nasi Ayam Bakar</h5>
+              <span class="badge bg-success mb-3">Rp 12.000</span>
+              <p class="card-text flex-grow-1">Ayam yang empuk berbumbu manis pedas, dibakar sempurna. Disajikan dengan nasi, sambal, dan lalapan.
+
+                .</p>
+              <button class="btn btn-outline-primary mt-auto btnPesan" data-menu="Ayam Bakar">Pesan</button>
+            </div>
+          </div>
+        </div>
+        <!-- Card: Ayam Geprek -->
+        <div class="col-md-4 mb-4 d-flex align-items-stretch">
+          <div class="card h-100 d-flex flex-column menu-card shadow-sm mb-3">
+            <img src="ayamgeprekjpg.jpg" class="card-img-top menu-img" alt="Ayam Geprek">
+            <div class="card-body d-flex flex-column p-3">
+              <h5 class="card-title">Nasi Ayam Geprek</h5>
+              <span class="badge bg-success mb-2">Rp 15.000</span>
+              <p class="card-text flex-grow-1">Ayam goreng yang digeprek dengan sambal bawang pedas. Disajikan dengan nasi hangat dan lalapan.</p>
+              <button class="btn btn-outline-primary mt-auto btnPesan" data-menu="Ayam Geprek">Pesan</button>
+            </div>
+          </div>
+        </div>
+        <!-- Card: Nasi Goreng Spesial -->
+        <div class="col-md-4 mb-4 d-flex align-items-stretch">
+          <div class="card h-100 d-flex flex-column menu-card shadow-sm mb-3">
+            <img src="nasgor.jpg" class="card-img-top menu-img" alt="Nasi Goreng">
+            <div class="card-body d-flex flex-column p-3">
+              <h5 class="card-title">Nasi Goreng Spesial</h5>
+              <span class="badge bg-warning mb-2">Rp 15.000</span>
+              <p class="card-text flex-grow-1">Nasi goreng komplit + ayam, telur, sosis, dan kerupuk. Gurih dan bikin kenyang.</p>
+              <button class="btn btn-outline-primary mt-auto btnPesan" data-menu="Nasi Goreng">Pesan</button>
+            </div>
+          </div>
+        </div>
+        <!-- Card: Ayam Lava -->
+        <div class="col-md-4 mb-4 d-flex align-items-stretch">
+          <div class="card h-100 d-flex flex-column menu-card shadow-sm mb-3">
+            <img src="ayamlava.jpg" class="card-img-top menu-img" alt="Ayam Lava">
+            <div class="card-body d-flex flex-column p-3">
+              <h5 class="card-title">Nasi Ayam Lava</h5>
+              <span class="badge bg-warning mb-2">Rp 12.000</span>
+                <p class="card-text flex-grow-1">Ayam goreng crispy disiram saus pedas meleleh seperti lava. Pedasnya mantap, rasa gurihnya nempel di lidah.</p>
+                <button class="btn btn-outline-primary mt-auto btnPesan" data-menu="Ayam Lava">Pesan</button>
+            </div>
+          </div>
+        </div>
+        <!-- Card: Ayam Penyet/Cabai Hijau -->
+      <div class="col-md-4 mb-4 d-flex align-items-stretch">
+        <div class="card h-100 d-flex flex-column menu-card shadow-sm mb-3">
+          <img src="ayampnyet.jpg" class="card-img-top menu-img" alt="Ayam Penyet/Cabai Hijau">
+          <div class="card-body d-flex flex-column p-3">
+            <h5 class="card-title">Nasi Ayam Penyet/Cabai Hijau</h5>
+            <span class="badge bg-warning mb-2">Rp 12.000</span>
+            <p class="card-text flex-grow-1">Ayam goreng penyet + sambal ijo segar, nasi, dan lalapan. Pedasnya beda, wangi cabainya nendang!.</p>
+            <button class="btn btn-outline-primary mt-auto btnPesan" data-menu="Ayam Penyet/Cabai Hijau">Pesan</button>
+          </div>
+        </div>
+      </div>
+      <!-- Card: Paket lele cabai hijau + Teh manis -->
+      <div class="col-md-4 mb-4 d-flex align-items-stretch">
+        <div class="card h-100 d-flex flex-column menu-card shadow-sm mb-3">
+          <img src="lelecabeijo.jpg" class="card-img-top menu-img" alt="lelecabeijo">
+          <div class="card-body d-flex flex-column p-3">
+            <h5 class="card-title">Paket Lele Cabai Hijau + Teh Manis</h5>
+            <span class="badge bg-warning mb-2">Rp 12.000</span>
+            <p class="card-text flex-grow-1">Lele goreng penyet + sambal ijo segar, nasi, dan lalapan. Pedasnya beda, wangi cabainya nendang!.</p>
+            <button class="btn btn-outline-primary mt-auto btnPesan" data-menu="Paket Lele Cabai Hijau + Teh Manis">Pesan</button>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  
-  <section id="kontak" class="py-5 bg-light">
-    <div class="container">
-      <div class="row g-5 justify-content-center">
-        <div class="col-lg-6">
-          <h2 class="text-center mb-4">Rekap Pesanan Anda</h2>
-          <div id="rekapList" class="mb-3">
-            <p class="text-center text-muted">Pesanan Anda akan muncul di sini.</p>
-          </div>
-          <div class="text-center">
-            <button id="kirimWA" class="btn btn-success btn-lg"><i class="bi bi-whatsapp me-2"></i>Kirim Pesanan ke WhatsApp</button>
+
+      <!-- Kategori Minuman -->
+      <h4 class="fw-bold mb-3 mt-5" id="kategori-minuman">Minuman</h4>
+      <hr class="my-4">
+      <div class="row g-4">
+        <!-- Card: Cappuccino Susu -->
+        <div class="col-md-4 mb-4 d-flex align-items-stretch">
+          <div class="card h-100 d-flex flex-column menu-card shadow-sm mb-3">
+            <img src="cappucino.jpg" class="card-img-top menu-img" alt="Cappuccino">
+            <div class="card-body d-flex flex-column p-3">
+              <h5 class="card-title">Cappuccino Susu</h5>
+              <span class="badge bg-success mb-2">Rp 5.000 (HOT) / Rp 7.000 (ICE)</span>
+              <p class="card-text flex-grow-1">Kopi creamy dan manis ringan, siap nemenin kuliah dan ngobrol santai.</p>
+              <div class="d-flex justify-content-center align-items-center gap-3" style="margin-bottom:1.8rem;">
+                <label class="form-check-label mb-0">
+                  <input type="radio" name="cappuccino_susu_varian_menu" value="HOT" class="form-check-input" checked> HOT
+                </label>
+                <label class="form-check-label mb-0">
+                  <input type="radio" name="cappuccino_susu_varian_menu" value="ICE" class="form-check-input"> ICE
+                </label>
+              </div>
+
+              <button class="btn btn-outline-primary mt-auto btnPesan" data-menu="Cappuccino Susu" style="margin-top:1.5rem;">Pesan</button>
+            </div>
           </div>
         </div>
-        <div class="col-lg-5">
-          <h2 class="text-center mb-4">Hubungi Kami</h2>
-          <div class="card">
-            <div class="card-body">
-              <ul class="list-unstyled mb-0">
-                <li class="d-flex align-items-center mb-3"><i class="bi bi-geo-alt-fill fs-4 me-3 text-primary"></i><span>Jl. KL YOS SUDARSO MEDAN (Kantin Potensi Utama)</span></li>
-                <li class="d-flex align-items-center mb-3"><i class="bi bi-telephone-fill fs-4 me-3 text-primary"></i><span>0812-6071-3931</span></li>
-                <li class="d-flex align-items-center"><i class="bi bi-envelope-fill fs-4 me-3 text-primary"></i><span>fikkycoffee@gmail.com</span></li>
-              </ul>
+        <!-- Card: Matcha -->
+        <div class="col-md-4 mb-4 d-flex align-items-stretch">
+          <div class="card h-100 d-flex flex-column menu-card shadow-sm mb-3">
+            <img src="matcha.jpg" class="card-img-top menu-img" alt="Matcha">
+            <div class="card-body d-flex flex-column p-3">
+              <h5 class="card-title">Matcha</h5>
+              <span class="badge bg-success mb-2">Rp 7.000</span>
+              <p class="card-text flex-grow-1">Rasa segar dan creamy dari teh hijau dan susu, pas banget buat ngilangin penat kuliah.</p>
+              <button class="btn btn-outline-primary mt-auto btnPesan" data-menu="Matcha">Pesan</button>
+            </div>
+          </div>
+        </div>
+        <!-- Card: Air Mineral -->
+        <div class="col-md-4 mb-4 d-flex align-items-stretch">
+          <div class="card h-100 d-flex flex-column menu-card shadow-sm mb-3">
+            <img src="airmineral.jpg" class="card-img-top menu-img" alt="Air Mineral">
+            <div class="card-body d-flex flex-column p-3">
+              <h5 class="card-title">Air Mineral</h5>
+              <span class="badge bg-warning mb-2">Rp 5.000</span>
+              <p class="card-text flex-grow-1">Air mineral segar dengan kemasan botol.</p>
+              <button class="btn btn-outline-primary mt-auto btnPesan" data-menu="Air Mineral">Pesan</button>
+            </div>
+          </div>
+        </div>
+        <!-- Card: Badak Susu -->
+        <div class="col-md-4 mb-4 d-flex align-items-stretch">
+          <div class="card h-100 d-flex flex-column menu-card shadow-sm mb-3">
+            <img src="badak.jpg" class="card-img-top menu-img" alt="Badak">
+            <div class="card-body d-flex flex-column p-3">
+              <h5 class="card-title">Badak Susu</h5>
+              <span class="badge bg-warning mb-2">Rp 7.000</span>
+              <p class="card-text flex-grow-1">Badak susu yang segar dan nikmat, cocok untuk teman ngobrol.</p>
+              <button class="btn btn-outline-primary mt-auto btnPesan" data-menu="Badak Susu">Pesan</button>
+            </div>
+          </div>
+        </div>
+        <!-- Card: Lemon Tea -->
+        <div class="col-md-4 mb-4 d-flex align-items-stretch">
+          <div class="card h-100 d-flex flex-column menu-card shadow-sm mb-3">
+            <img src="lemontea.jpg" class="card-img-top menu-img" alt="Lemon Tea">
+            <div class="card-body d-flex flex-column p-3">
+              <h5 class="card-title">Lemon Tea</h5>
+              <div class="mb-2">
+                <span class="badge bg-warning mb-1 d-block" style="font-size:1.08rem;">Rp 7.000 <span class="text-muted" style="font-size:0.97em;">(ICE)</span></span>
+                <span class="badge bg-warning d-block" style="font-size:1.08rem;">Rp 5.000 <span class="text-muted" style="font-size:0.97em;">(HOT)</span></span>
+              </div>
+              <p class="card-text flex-grow-1">Lemon tea yang segar dan nikmat, cocok untuk teman ngobrol.</p>
+              <div class="d-flex justify-content-center align-items-center gap-3" style="margin-bottom:1.8rem;">
+                <label class="form-check-label mb-0">
+                  <input type="radio" name="lemontea_varian_menu" value="ICE" class="form-check-input" checked> ICE
+                </label>
+                <label class="form-check-label mb-0">
+                  <input type="radio" name="lemontea_varian_menu" value="HOT" class="form-check-input"> HOT
+                </label>
+              </div>
+              <button class="btn btn-outline-primary mt-auto btnPesan" data-menu="Lemon Tea">Pesan</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Kategori Cemilan -->
+      <h4 class="fw-bold mb-3 mt-5" id="kategori-cemilan">Cemilan</h4>
+      <hr class="my-4">
+      <div class="row g-4">
+        <!-- Card: Dimsum -->
+        <div class="col-md-4 mb-4 d-flex align-items-stretch">
+          <div class="card h-100 d-flex flex-column menu-card shadow-sm mb-3">
+            <img src="dimsum.jpg" class="card-img-top menu-img" alt="Dimsum">
+            <div class="card-body d-flex flex-column p-3">
+              <h5 class="card-title">Dimsum</h5>
+              <span class="badge bg-warning mb-2">Rp 17.000</span>
+              <p class="card-text flex-grow-1">Isi 4 pcs. Lembut, gurih, dan nikmat dengan saus spesial.</p>
+              <button class="btn btn-outline-primary mt-auto btnPesan" data-menu="Dimsum">Pesan</button>
+            </div>
+          </div>
+        </div>
+        <!-- Card: Bakso Bakar -->
+        <div class="col-md-4 mb-4 d-flex align-items-stretch">
+          <div class="card h-100 d-flex flex-column menu-card shadow-sm mb-3">
+            <img src="baksobakar.jpg" class="card-img-top menu-img" alt="Bakso Bakar">
+            <div class="card-body d-flex flex-column p-3">
+              <h5 class="card-title">Bakso Bakar</h5>
+              <div class="mb-2">
+                <span class="badge bg-warning mb-1 d-block" style="font-size:1.08rem;">Rp 10.000 <span class="text-muted" style="font-size:0.97em;">(8 tusuk)</span></span>
+                <span class="badge bg-warning d-block" style="font-size:1.08rem;">Rp 5.000 <span class="text-muted" style="font-size:0.97em;">(4 tusuk)</span></span>
+              </div>
+              <p class="card-text flex-grow-1">Bakso bakar yang enak dan gurih dengan bumbu spesial.</p>
+              <div class="d-flex justify-content-center align-items-center gap-3" style="margin-bottom:1.8rem;">
+                <label class="form-check-label mb-0">
+                  <input type="radio" name="baksobakar_varian_menu" value="8 tusuk" class="form-check-input" checked> 8 tusuk
+                </label>
+                <label class="form-check-label mb-0">
+                  <input type="radio" name="baksobakar_varian_menu" value="4 tusuk" class="form-check-input"> 4 tusuk
+                </label>
+              </div>
+              <button class="btn btn-outline-primary mt-auto btnPesan" data-menu="Bakso Bakar">Pesan</button>
+            </div>
+          </div>
+        </div>
+        <!-- Card: Piscok -->
+        <div class="col-md-4 mb-4 d-flex align-items-stretch">
+          <div class="card h-100 d-flex flex-column menu-card shadow-sm mb-3">
+            <img src="piscok.jpg" class="card-img-top menu-img" alt="piscok">
+            <div class="card-body d-flex flex-column p-3">
+              <h5 class="card-title">Piscok</h5>
+              <span class="badge bg-warning mb-2">Rp 1.000</span>
+              <p class="card-text flex-grow-1">Piscok pisang coklat yang renyah dengan topping coklat.</p>
+              <button class="btn btn-outline-primary mt-auto btnPesan" data-menu="Piscok">Pesan</button>
+            </div>
+          </div>
+        </div>
+        <!-- Cemilan Baru: Nugget Goreng -->
+        <div class="col-md-4 mb-4 d-flex align-items-stretch">
+          <div class="card h-100 d-flex flex-column menu-card shadow-sm mb-3">
+            <img src="nuggetgoreng.jpg" class="card-img-top menu-img" alt="Nugget Goreng">
+            <div class="card-body d-flex flex-column p-3">
+              <h5 class="card-title">Nugget Goreng</h5>
+              <span class="badge bg-warning mb-2">Rp 5.000</span>
+              <p class="card-text flex-grow-1">Nugget goreng yang renyah dan gurih dengan saus spesial.</p>
+              <button class="btn btn-outline-primary mt-auto btnPesan" data-menu="Nugget Goreng">Pesan</button>
+            </div>
+          </div>
+        </div>
+        <!-- Cemilan Baru: Kentang Goreng -->
+        <div class="col-md-4 mb-4 d-flex align-items-stretch">
+          <div class="card h-100 d-flex flex-column menu-card shadow-sm mb-3">
+            <img src="sosisgoreng.jpg" class="card-img-top menu-img" alt="Sosis Goreng">
+            <div class="card-body d-flex flex-column p-3">
+              <h5 class="card-title">Sosis Goreng</h5>
+              <span class="badge bg-warning mb-2">Rp 5.000</span>
+              <p class="card-text flex-grow-1">Sosis goreng yang renyah dan gurih dengan saus spesial.</p>
+              <button class="btn btn-outline-primary mt-auto btnPesan" data-menu="Sosis Goreng">Pesan</button>
+            </div>
+          </div>
+        </div>
+        <!-- Cemilan Baru: Cireng -->
+        <div class="col-md-4 mb-4 d-flex align-items-stretch">
+          <div class="card h-100 d-flex flex-column menu-card shadow-sm mb-3">
+            <img src="tempegoreng.jpg" class="card-img-top menu-img" alt="Tempe Goreng">
+            <div class="card-body d-flex flex-column p-3">
+              <h5 class="card-title">Tempe Goreng</h5>
+              <span class="badge bg-warning mb-2">Rp 5.000</span>
+              <p class="card-text flex-grow-1">Tempe goreng yang renyah dan gurih dengan saus spesial.</p>
+              <button class="btn btn-outline-primary mt-auto btnPesan" data-menu="Tempe Goreng">Pesan</button>
             </div>
           </div>
         </div>
@@ -241,62 +503,131 @@
     </div>
   </section>
 
-  <footer class="text-white text-center">
-    <div class="container footer-content d-flex flex-column flex-md-row justify-content-between align-items-center">
-      <div class="mb-3 mb-md-0">
-        &copy; 2025 Fikky Coffee. All Rights Reserved.
+  <hr class="my-0" style="border-color:#e0c9a6;opacity:0.5;">
+
+  <!-- ========== TESTIMONI PELANGGAN ========== -->
+  <section id="testimoni" class="py-5 bg-white">
+    <div class="container">
+      <h2 class="text-center mb-4">Testimoni Pelanggan</h2>
+      <div class="row justify-content-center">
+        <div class="col-md-4">
+          <div class="card mb-3">
+            <div class="card-body">
+              <p class="card-text">"Makanan enak, tempatnya nyaman banget buat nongkrong!"</p>
+              <h6 class="card-subtitle text-muted">- Nanda, Mahasiswa</h6>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card mb-3">
+            <div class="card-body">
+              <p class="card-text">"Menu makanan dan minuman juga variatif, recommended!"</p>
+              <h6 class="card-subtitle text-muted">- Mutiara Sovina, Dosen</h6>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card mb-3">
+            <div class="card-body">
+              <p class="card-text">"Pelayanan ramah baik dan cepat, pokoknya recommended buat mahasiswa yang mau nongkrong!"</p>
+              <h6 class="card-subtitle text-muted">- Andika, Mahasiswa</h6>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="d-flex align-items-center gap-3">
-        <span class="fw-bold">Follow Us:</span>
-        <a href="https://www.instagram.com/fikky.coffee?igsh=MXJyOTFza3o2YXRkYg==" target="_blank" rel="noopener" aria-label="Instagram">
-          <img src="https://cdn.jsdelivr.net/npm/simple-icons@v12/icons/instagram.svg" alt="Instagram" class="sosmed-icon">
+    </div>
+  </section>
+
+  <hr class="my-0" style="border-color:#e0c9a6;opacity:0.5;">
+
+  <!-- ========== FORM KONTAK & LOKASI ========== -->
+  <section id="kontak" class="py-6">
+    <div class="container" style="max-width:900px;">
+      <h2 class="text-center mb-4 fw-bold">Hubungi Kami</h2>
+      <div class="row justify-content-center">
+        <div class="col-md-6 mb-4">
+          <div class="mb-4">
+            <h5 class="mb-3">Form Kontak</h5>
+            <form id="formKontak">
+              <div class="mb-3">
+                <label for="nama" class="form-label">Nama</label>
+                <input type="text" id="nama" class="form-control" placeholder="Nama Anda" required>
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" id="email" class="form-control" placeholder="email@contoh.com" required>
+              </div>
+              <div class="mb-3">
+                <label for="pesan" class="form-label">Pesan</label>
+                <textarea id="pesan" class="form-control" rows="4" placeholder="Tulis pesan Anda di sini..." required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary w-100">Kirim Pesan</button>
+              <div id="notif" class="mt-3 alert alert-success text-center p-2" style="display: none;">Pesan berhasil dikirim!</div>
+            </form>
+          </div>
+        </div>
+        <div class="col-md-5 mb-4">
+          <div class="mb-4">
+            <h5 class="mb-3">Info Kontak</h5>
+            <ul class="list-unstyled mb-4 d-flex flex-wrap align-items-center gap-4" style="flex-direction: row;">
+              <li class="mb-0" style="white-space:nowrap;"><i class="bi bi-geo-alt-fill me-2"></i><strong>Alamat  :</strong> Jl. KL YOS SUDARSO MEDAN (Kantin Potensi Utama)</li>
+              <li class="mb-0"><i class="bi bi-telephone-fill me-2"></i><strong>Telepon :</strong> 0812-6071-3931</li>
+              <li class="mb-0"><i class="bi bi-envelope-fill me-2"></i><strong>Email  :</strong> fikkycoffee@gmail.com</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== REKAP PESANAN ========== -->
+  <section id="rekap" class="py-4">
+    <div class="container">
+      <h2 class="text-center mb-4">Rekap Pesanan Anda</h2>
+      <p class="text-center text-muted mb-4">Berikut adalah daftar pesanan yang telah Anda buat. Anda dapat mengedit, menghapus, atau mengirim pesanan ke WhatsApp.</p>
+      <div id="rekapList" class="mb-3"></div>
+      <div class="text-center mb-3">
+        <button id="refreshRekap" class="btn btn-outline-secondary me-2"><i class="bi bi-arrow-clockwise"></i> Refresh</button>
+        <button id="checkoutBtn" class="btn btn-primary" style="display:none;">Checkout</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== KIRIM KE WHATSAPP ========== -->
+  <section id="kirimwa-section" class="py-2">
+    <div class="container text-center">
+      <h3 class="mb-3">Kirim Pesanan ke WhatsApp</h3>
+      <div class="mb-2">
+        <a href="https://wa.me/6281260713931" target="_blank" rel="noopener" title="Chat WhatsApp">
+          <i class="bi bi-whatsapp wa-big-icon" style="font-size:2.7rem;color:#25d366;"></i>
         </a>
-        <a href="https://wa.me/6281260713931" target="_blank" rel="noopener" aria-label="WhatsApp">
-          <img src="https://cdn.jsdelivr.net/npm/simple-icons@v12/icons/whatsapp.svg" alt="WhatsApp" class="sosmed-icon">
+        <div>
+          <a href="https://wa.me/6281260713931" target="_blank" rel="noopener" class="wa-label-link">WhatsApp</a>
+        </div>
+      </div>
+      <button id="kirimWA" class="btn btn-success" style="display:none;"><i class="bi bi-whatsapp"></i> Kirim ke WhatsApp</button>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="bg-dark text-white text-center p-3 d-flex flex-column flex-md-row justify-content-between align-items-center">
+    <div class="mb-2 mb-md-0 w-100 text-center">
+      &copy; 2025 Fikky Coffee. All rights reserved.
+    </div>
+    <div class="d-flex align-items-center gap-3 justify-content-md-end w-100 justify-content-center justify-content-md-end">
+      <div class="sosmed-footer">
+        <a href="https://www.instagram.com/fikky.coffee?igsh=MXJyOTFza3o2YXRkYg==" target="_blank" title="Instagram">
+          <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/instagram.svg" alt="Instagram" class="sosmed-icon">
+        </a>
+        <a href="https://wa.me/6281260713931" target="_blank" title="WhatsApp">
+          <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/whatsapp.svg" alt="WhatsApp" class="sosmed-icon">
         </a>
       </div>
     </div>
   </footer>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-  
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      // Gallery Modal Logic
-      const galeriModal = document.getElementById('galeriModal');
-      galeriModal.addEventListener('show.bs.modal', function (event) {
-        const button = event.relatedTarget;
-        const imgSrc = button.getAttribute('data-bs-img-src');
-        const modalImage = document.getElementById('modalImage');
-        modalImage.src = imgSrc;
-      });
-
-      // Simple Navbar active state script
-      const sections = document.querySelectorAll('section');
-      const navLi = document.querySelectorAll('.navbar-nav .nav-item .nav-link');
-      window.addEventListener('scroll', () => {
-        let current = '';
-        sections.forEach(section => {
-          const sectionTop = section.offsetTop;
-          if (pageYOffset >= sectionTop - 150) {
-            current = section.getAttribute('id');
-          }
-        });
-
-        navLi.forEach(a => {
-          a.classList.remove('active');
-          if (a.getAttribute('href') == `#${current}`) {
-            a.classList.add('active');
-          }
-        });
-      });
-
-      // Add your existing order/recap logic here
-      // For example:
-      // const pesanan = [];
-      // const btnPesan = document.querySelectorAll('.btnPesan');
-      // etc...
-    });
-  </script>
+  <!-- Script Bootstrap, Icon, Animasi, Theme, & Kirim Form -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
