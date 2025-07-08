@@ -932,3 +932,160 @@ footer {
     max-height: 200px;
   }
 }
+
+/* ===== Media Query Responsif untuk Beranda (Jumbotron) ===== */
+@media (max-width: 576px) {
+  .jumbotron {
+    padding-top: 70px !important;
+    min-height: 60vh !important;
+    background-position: center top !important;
+  }
+  .jumbotron .card-body {
+    padding: 1.1rem !important;
+  }
+  .jumbotron img {
+    width: 80px !important;
+    height: 80px !important;
+  }
+  .jumbotron .display-4, .jumbotron h1 {
+    font-size: 1.3rem !important;
+  }
+  .jumbotron .lead, .jumbotron p {
+    font-size: 0.98rem !important;
+  }
+  .jumbotron .btn {
+    font-size: 0.95rem !important;
+    padding: 0.5rem 1.1rem !important;
+    margin: 0.3rem 0.2rem !important;
+  }
+  .jumbotron .badge {
+    font-size: 0.85rem !important;
+    padding: 0.4em 0.7em !important;
+  }
+}
+
+@media (min-width: 577px) and (max-width: 991.98px) {
+  .jumbotron {
+    padding-top: 80px !important;
+    min-height: 70vh !important;
+  }
+  .jumbotron img {
+    width: 110px !important;
+    height: 110px !important;
+  }
+  .jumbotron .display-4, .jumbotron h1 {
+    font-size: 2rem !important;
+  }
+  .jumbotron .lead, .jumbotron p {
+    font-size: 1.08rem !important;
+  }
+  .jumbotron .btn {
+    font-size: 1.05rem !important;
+    padding: 0.7rem 1.3rem !important;
+  }
+}
+
+@media (min-width: 992px) {
+  .jumbotron {
+    padding-top: 110px !important;
+    min-height: 80vh !important;
+  }
+  .jumbotron img {
+    width: 140px !important;
+    height: 140px !important;
+  }
+  .jumbotron .display-4, .jumbotron h1 {
+    font-size: 2.7rem !important;
+  }
+}
+
+/* ===== Media Query Responsif untuk About, Galeri, Menu, dan Kontak ===== */
+@media (max-width: 576px) {
+  /* ABOUT */
+  #about .card-body {
+    padding: 1.1rem !important;
+    font-size: 0.98rem !important;
+  }
+  #about h2 {
+    font-size: 1.2rem !important;
+  }
+  #about ul {
+    padding-left: 1.1rem !important;
+  }
+  /* GALERI */
+  #galeri .gallery-img {
+    max-width: 100%;
+    max-height: 90px !important;
+    margin-bottom: 0.5rem;
+  }
+  #galeri .gallery-caption {
+    font-size: 0.92rem !important;
+  }
+  #galeri h2 {
+    font-size: 1.2rem !important;
+  }
+  /* MENU */
+  #menu h2 {
+    font-size: 1.2rem !important;
+  }
+  #menu .card-title {
+    font-size: 1.05rem !important;
+  }
+  #menu .card-text {
+    font-size: 0.95rem !important;
+  }
+  #menu .badge {
+    font-size: 0.9rem !important;
+    padding: 0.3em 0.7em !important;
+  }
+  #menu .card {
+    min-height: 220px !important;
+    height: auto !important;
+    max-height: none !important;
+    padding-bottom: 0.7rem !important;
+  }
+  #menu .card-img-top {
+    width: 60px !important;
+    height: 60px !important;
+    margin-top: -18px !important;
+  }
+  #menu .btnPesan {
+    font-size: 0.95rem !important;
+    padding: 0.4rem 0.7rem !important;
+    left: 6%;
+    right: 6%;
+  }
+  /* KONTAK */
+  #kontak .form-label {
+    font-size: 0.98rem !important;
+  }
+  #kontak .form-control {
+    font-size: 0.97rem !important;
+    padding: 0.5rem 0.7rem !important;
+  }
+  #kontak h2 {
+    font-size: 1.2rem !important;
+  }
+  #kontak .list-unstyled li {
+    font-size: 0.97rem !important;
+    margin-bottom: 0.5rem !important;
+  }
+}
+
+@media (min-width: 577px) and (max-width: 991.98px) {
+  #about .card-body, #galeri .gallery-caption, #menu .card-title, #menu .card-text, #kontak .form-label, #kontak .form-control, #kontak .list-unstyled li {
+    font-size: 1.05rem !important;
+  }
+  #galeri .gallery-img {
+    max-height: 120px !important;
+  }
+  #menu .card-img-top {
+    width: 80px !important;
+    height: 80px !important;
+  }
+  #menu .card {
+    min-height: 270px !important;
+    height: auto !important;
+    max-height: none !important;
+  }
+}
