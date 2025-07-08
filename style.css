@@ -867,3 +867,68 @@ footer {
   padding-left: 0.5rem !important;
   padding-right: 0.5rem !important;
 }
+
+/* ===== Tambahan Media Query Responsif Custom ===== */
+@media (max-width: 576px) {
+  /* Jumbotron padding lebih kecil di HP */
+  .jumbotron .card-body {
+    padding: 1.2rem !important;
+  }
+  /* Menu card dan gambar lebih kecil */
+  .menu-card {
+    margin-bottom: 1.2rem !important;
+  }
+  .menu-img {
+    max-height: 110px !important;
+    object-fit: cover;
+  }
+  /* Gallery image lebih kecil */
+  .gallery-img {
+    max-height: 100px !important;
+    object-fit: cover;
+  }
+  /* Footer padding dan font lebih kecil */
+  footer {
+    font-size: 0.95rem !important;
+    padding: 0.7rem 0.2rem !important;
+    flex-direction: column !important;
+    gap: 0.5rem;
+  }
+  .sosmed-footer {
+    gap: 0.7rem !important;
+  }
+  /* Navbar brand lebih kecil */
+  .navbar-brand img {
+    width: 32px !important;
+    height: 32px !important;
+  }
+}
+
+@media (min-width: 577px) and (max-width: 991.98px) {
+  /* Untuk tablet dan iPad */
+  .jumbotron .card-body {
+    padding: 2rem 2.2rem !important;
+  }
+  .menu-img, .gallery-img {
+    max-height: 140px !important;
+  }
+  .menu-card {
+    margin-bottom: 1.7rem !important;
+  }
+  footer {
+    font-size: 1rem !important;
+    padding: 1.1rem 0.5rem !important;
+  }
+}
+
+@media (min-width: 992px) {
+  /* Untuk laptop/desktop, pastikan card tidak terlalu besar */
+  .menu-card {
+    max-width: 370px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .gallery-img {
+    max-height: 200px;
+  }
+}

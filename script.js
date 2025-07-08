@@ -119,7 +119,7 @@ window.addEventListener('DOMContentLoaded', function() {
     console.log('getHarga dipanggil dengan menu:', menu); // Debug log
     switch (menu) {
       case 'Ayam Bakar': return 12000;
-      case 'Ayam Geprek': return 15000;
+      case 'Ayam Geprek': return 12000;
       case 'Nasi Goreng Spesial': return 15000;
       case 'Ayam Penyet/Cabai Hijau': return 12000;
       case 'Ayam Lava': return 12000;
@@ -262,5 +262,12 @@ window.addEventListener('DOMContentLoaded', function() {
     pesananList = [];
     localStorage.removeItem('pesananList');
     updateRekap();
+  });
+
+  document.querySelectorAll('.kategori-menu-btn').forEach(btn => {
+    btn.addEventListener('click', function() {
+      const target = document.querySelector(this.getAttribute('data-target'));
+      if(target) target.scrollIntoView({behavior:'smooth', block:'start'});
+    });
   });
 });

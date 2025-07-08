@@ -5,6 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Fikky Coffee</title>
 
+  <!-- Favicon -->
+  <link rel="icon" type="image/jpeg" href="logo.jpg">
+  <link rel="shortcut icon" type="image/jpeg" href="logo.jpg">
+  <link rel="apple-touch-icon" href="logo.jpg">
+
   <!-- Bootstrap CSS CDN -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
@@ -19,7 +24,10 @@
   <!-- ========== NAVBAR ========== -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container position-relative">
-      <a class="navbar-brand fw-bold fs-3" href="#">Fikky Coffee</a>
+      <a class="navbar-brand fw-bold fs-3 d-flex align-items-center" href="#">
+        <img src="logo.jpg" alt="Logo Fikky Coffee" class="me-2" style="width: 40px; height: 40px; object-fit: cover; border-radius: 50%;">
+        Fikky Coffee
+      </a>
       <button class="navbar-toggler position-absolute top-0 end-0 mt-2 me-2 d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu" aria-label="Toggle navigation" style="z-index:1051;">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -155,7 +163,7 @@
       <div class="col-6 col-md-4 col-lg-3">
         <div class="gallery-item">
           <img src="gambar6.jpg" alt="Bagian Dalam Hadap Depan" class="img-fluid rounded shadow gallery-img" data-bs-toggle="modal" data-bs-target="#galeriModal7">
-          <div class="gallery-caption text-center mt-2">Bagian Dalam Hadap Depan</div>
+          <div class="gallery-caption text-center mt-2">Bagian Dalam Hadap Dalam</div>
         </div>
       </div>
     </div>
@@ -270,7 +278,7 @@
             <img src="ayamgeprekjpg.jpg" class="card-img-top menu-img" alt="Ayam Geprek">
             <div class="card-body d-flex flex-column p-3">
               <h5 class="card-title">Nasi Ayam Geprek</h5>
-              <span class="badge bg-success mb-2">Rp 15.000</span>
+              <span class="badge bg-success mb-2">Rp 12.000</span>
               <p class="card-text flex-grow-1">Ayam goreng yang digeprek dengan sambal bawang pedas. Disajikan dengan nasi hangat dan lalapan.</p>
               <button class="btn btn-outline-primary mt-auto btnPesan" data-menu="Ayam Geprek">Pesan</button>
             </div>
@@ -279,12 +287,12 @@
         <!-- Card: Nasi Goreng Spesial -->
         <div class="col-md-4 mb-4 d-flex align-items-stretch">
           <div class="card h-100 d-flex flex-column menu-card shadow-sm mb-3">
-            <img src="nasgor.jpg" class="card-img-top menu-img" alt="Nasi Goreng">
+            <img src="nasgor.jpg" class="card-img-top menu-img" alt="Nasi Goreng Spesial">
             <div class="card-body d-flex flex-column p-3">
               <h5 class="card-title">Nasi Goreng Spesial</h5>
               <span class="badge bg-warning mb-2">Rp 15.000</span>
               <p class="card-text flex-grow-1">Nasi goreng komplit + ayam, telur, sosis, dan kerupuk. Gurih dan bikin kenyang.</p>
-              <button class="btn btn-outline-primary mt-auto btnPesan" data-menu="Nasi Goreng">Pesan</button>
+              <button class="btn btn-outline-primary mt-auto btnPesan" data-menu="Nasi Goreng Spesial">Pesan</button>
             </div>
           </div>
         </div>
