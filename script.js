@@ -132,7 +132,7 @@ window.addEventListener('DOMContentLoaded', function() {
       case 'Matcha':
         console.log('Matcha ditemukan, harga: 7000'); // Debug log
         return 7000;
-      case 'Air Mineral': return 5000;
+      case 'Taro': return 7000;
       case 'Badak Susu': return 7000;
       case 'Lemon Tea': return 7000;
       case 'Dimsum': return 17000;
